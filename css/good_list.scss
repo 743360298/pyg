@@ -1,0 +1,119 @@
+body{
+    padding-top: 90px ;
+}
+@mixin  ellpisis($num:1) {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+  }
+  
+.search_bar{
+    position: fixed ; 
+    top:0 ;
+    left:  0 ;
+    height: 45px;
+    width: 100% ;
+    // background-color: skyblue;
+    display: flex ;
+    justify-content: center; 
+    align-items: center ;
+    padding:  5px  0 5px 5px ;
+    .Refresh{
+        display: flex ;
+        justify-content: center ;
+        align-items: center ;
+        i{
+            padding: 5px ; 
+        }
+    }
+    .search{
+        flex:  1 ;
+        align-items: center ; 
+        border-radius:  5px ; 
+        .search_txt{
+            padding-top: 10px ;
+            width: 100% ;
+            margin:  0  ; 
+        }
+    }
+    .searchBtn{
+        width: 50px;
+        font-size: 14px ;
+        display: flex ;
+        justify-content: center ;
+        align-items: center ;
+    }
+
+}
+.sort_bar{
+    background-color: #f7f7f7;
+    position: fixed ; 
+    top:45px  ;
+    left:  0 ;
+    height: 45px;
+    width: 100% ;
+    display: flex ; 
+    a{ 
+        flex:  1 ;
+        text-align: center ;
+        line-height: 45px; 
+    }
+}
+.pyg_view{
+    position: relative;
+}
+.loadding{
+    &::before{
+        display: none ;
+    }
+    &::after{
+        display: none ;
+    }
+}
+
+
+    .pyg_list{
+        li{
+            // background-color: pink ;
+            background-color: #f7f7f7 ;
+            margin: 5px ; 
+            a{  position: relative;
+                display: flex; 
+                .item_img{
+                    flex:  1 ; 
+                    img{
+                        width: 50% ;
+                        margin: 0 auto ; 
+                        display: block ;
+                    }
+                }
+                .item_info{
+                    flex:  2 ;
+                    display: flex ; 
+                    flex-direction: column ;
+                    justify-content: space-around  ; 
+                    p{
+                        margin-bottom:  0 ;
+                    }
+                    .goods_name{
+                        width: 100% ;
+                        @include ellpisis(1);
+                    }
+                    .toRight{
+                        font-size: 20px ;
+                        position: absolute ; 
+                        top: 50% ;
+                        transform: translateY(-50%); 
+                        right: 15px ;
+                    }
+                    .goods_price{
+                        color: red ; 
+                    }
+                }
+            }
+        }
+    }

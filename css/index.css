@@ -1,0 +1,77 @@
+.pyg_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg_nav a {
+  display: block;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+}
+
+.pyg_list {
+  width: 100%;
+  padding-bottom: 5px;
+  padding: 0 5px;
+}
+
+.pyg_list .g_title img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin-top: 5px;
+  -webkit-box-shadow: 0 0 1px 0 #999;
+          box-shadow: 0 0 1px 0 #999;
+}
+
+.pyg_list .goods_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pyg_list .goods_list li {
+  padding: 10px;
+  margin-top: 5px;
+  width: 49.2%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 1px 0 #999;
+          box-shadow: 0 0 1px 0 #999;
+}
+
+.pyg_list .goods_list li .goods_info .goods_name {
+  height: 44px;
+  overflow: hidden;
+  font-size: 14px;
+  color: #666;
+}
+
+.pyg_list .goods_list li .goods_info .goods_price {
+  color: red;
+}
+
+.pyg_list .goods_list li .goods_like {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+.more {
+  padding: 0 5px;
+  margin: 5px  auto;
+}
+
+.more a {
+  display: block;
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */

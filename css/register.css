@@ -1,0 +1,31 @@
+.pyg_view {
+  padding: 10px;
+}
+
+.pyg_view .tools {
+  padding: 15px 5px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg_view .tools .mui-btn {
+  width: 50%;
+  margin-bottom: 10px;
+  padding: 13px 0;
+  font-size: 18px;
+}
+
+.pyg_view #dialogDemo {
+  position: relative;
+}
+
+#toastBtn {
+  position: absolute;
+  top: 0;
+  right: 13px;
+  z-index: 99999999999;
+  width: auto;
+}
+/*# sourceMappingURL=register.css.map */

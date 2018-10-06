@@ -1,0 +1,152 @@
+.pyg_view {
+  padding: 10px;
+}
+
+.pyg_userinfo {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pyg_userinfo .pyg_center {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 9;
+      -ms-flex: 9;
+          flex: 9;
+}
+
+.pyg_userinfo .pyg_center i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.pyg_userinfo .pyg_center .me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pyg_userinfo .pyg_center .me .username {
+  font-size: 15px;
+  color: #333;
+}
+
+.pyg_userinfo .pyg_center .me .mui-ellipsis {
+  font-size: 15px;
+  color: #999;
+}
+
+.pyg_userinfo .pyg_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pyg_userinfo .pyg_img img {
+  width: 50%;
+}
+
+.pyg_userinfo .pyg_img i {
+  margin-left: 5px;
+}
+
+.pgy_order {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.pgy_order .order_title {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.pgy_order .order_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pgy_order .order_center a {
+  padding: 10px 0 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pgy_order .order_center a i {
+  font-size: 20px;
+}
+
+.pgy_order .order_center a p {
+  color: #007aff;
+}
+
+.pyg_pwd {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.pyg_contack {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.pyg_contack ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.login_out {
+  margin-top: 20px;
+}
+
+.login_out button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+}
+/*# sourceMappingURL=me.css.map */

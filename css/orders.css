@@ -1,0 +1,63 @@
+.pyg_view {
+  padding: 10px 1px;
+}
+
+#segmentedControl {
+  background-color: #fff;
+}
+
+#item1,
+#item2,
+#item3 {
+  padding: 13px 8px;
+}
+
+.pyg-table {
+  background-color: #fff;
+  padding: 0 8px  0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.pyg-table li {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+}
+
+.pyg-table li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pyg-table li a .item_left {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pyg-table li a .item_left span {
+  color: #333 !important;
+}
+
+.pyg-table li a span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: red;
+}
+
+.pyg-table li:last-child {
+  border-bottom: 0;
+}
+/*# sourceMappingURL=orders.css.map */

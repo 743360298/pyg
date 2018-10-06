@@ -1,0 +1,67 @@
+// 导航
+.pyg_nav{
+    display: flex ;
+    a{
+        display: block ; 
+        text-align: center ;
+        flex: 1 ;
+        padding: 10px ;
+    }
+}
+// 商品列表
+.pyg_list{
+    width: 100%;
+    padding-bottom: 5px ; 
+    padding:0 5px ;
+    .g_title{
+        img{
+            height: 100% ;
+            width: 100%;
+            display: block ;
+            margin-top: 5px ; 
+            box-shadow: 0 0 1px 0 #999 ; 
+        }
+    }
+    .goods_list{
+        display: flex ;
+        flex-wrap: wrap ;
+        justify-content: space-between;
+        li{
+            padding: 10px ;
+            margin-top: 5px ;
+            width: 49.2% ;
+            background-color: #fff;
+            box-shadow: 0 0 1px 0 #999 ; 
+            .goods_info{
+                .goods_name{
+                    height: 44px ;  
+                    overflow: hidden;
+                    font-size: 14px ; 
+                    color: #666 ;
+                }
+                .goods_price{
+                    color: red ; 
+                }
+
+            }
+            .goods_like{
+                width: 60%;
+                display: block; 
+                margin: 0 auto ;
+            }
+        }
+    }
+
+}
+    // 加载更多more
+    .more{
+        // width: 96% ;
+        padding: 0 5px ;
+        margin: 5px  auto ; 
+        // padding-bottom:  55px ;
+        a{
+            display: block ;
+            text-align: center ;
+          
+        }
+    }

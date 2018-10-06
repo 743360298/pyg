@@ -1,0 +1,111 @@
+body{
+    padding: 45px 0 50px ;
+}
+#pyg_tool{
+    width: 100% ;
+    background-color: pink ;
+    position: fixed ;
+    bottom: 0 ;
+    left:  0 ;
+    display: flex ;
+    a{
+        flex:  1 ;
+        display: block ;
+        padding: 5px 0 ;
+        color: #666  ;
+        font-size: 14px ;
+        background-color: #fff;
+        i{
+            font-size: 20px ; 
+        }
+    }
+    a:nth-child(-n+2){
+        display: flex;
+        flex-direction: column ;
+        text-align: center ;
+    }
+    a:nth-child(3){
+        background-color: #222;
+        display: flex ;
+        justify-content: center ;
+        align-items: center; 
+        color : #fff ;
+    }
+    a:nth-child(4){
+        background-color: #e4393c; 
+        display: flex ;
+        justify-content: center ;
+        align-items: center; 
+        color : #fff ;
+    }
+
+}
+// 商品详情pyg_goods
+.pyg_goods{
+    font-weight: 600 ;
+    padding: 5px ;
+    font-size: 16px ;
+}
+.goods_price{
+    padding: 5px ;
+    font-size: 30px ;
+    color: orange ;
+}
+.goods_attr{
+    padding: 10px ;
+    li{
+        display: flex ;
+        font-size: 14px ;
+        border-bottom: 1px solid #ccc  ; 
+        padding: 8px 0 ;
+        span:nth-child(1){
+            color: #666 ;
+            flex: 1 ; 
+        }
+        span:nth-child(2){
+            flex:  3 ;
+            color: #333 ;
+        }
+    }
+    
+}
+
+// x详情
+.goods_infos{
+    padding:  10px ;
+    .goods_tab{
+        margin-bottom:  10px ; 
+    }
+    #gi1{
+        p{
+            display: block ;
+            height: 100%;
+            margin: 0 auto;
+            img{
+                display: block !important;
+                height: 100%;
+              }   
+        }
+    }
+    #gi2{
+        font-size: 14px ;
+        .gi2_title{
+            padding:  10px 0;
+            font-weight: 600 ; 
+            color: #666 ; 
+            border-bottom: 1px solid #333;
+        }
+        .gi2_content{
+            padding:  10px 0;
+            display: flex ;
+            color: #6d6d72   ; 
+            span:nth-child(1){
+                flex: 1;
+                
+            }
+            span:nth-child(2){
+                flex :3 ;
+            }
+        }
+    }
+}

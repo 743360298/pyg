@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 理想视口的标准写法  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="pyg_search">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+    <!-- 轮播图 -->
+    <div class="pyg_view">
+        <!-- 轮播图 -->
+        <div class="pyg_slides">
+            <div class="mui-slider">
+                <!-- 轮播图图片 -->
+
+                <!-- 索引器  -->
+
+            </div>
+        </div>
+
+        <!-- 导航 -->
+        <div class="pyg_nav">
+            <!-- <a href="javascript:;">
+                <img src="http://pdydxvpol.bkt.clouddn.com/icon_index_nav_4@2x.png" alt="">
+            </a> -->
+        </div>
+        <!-- 商品列表 -->
+        <div class="pyg_list">
+                <!-- <div class="g_title">
+                    <img src="http://image4.suning.cn/uimg/cms/img/149559219946350066.png" alt="">
+                </div> -->
+                <!-- <ul class="goods_list" >
+                     <li>
+                        <a href="javascript:;" class="goods_info">
+                            <img src="http://image5.suning.cn/uimg/b2c/newcatentries/0070089069-000000000127776060_1_400x400.jpg" alt="">
+                            <div class="goods_name">Aveeno艾维诺 婴儿天然燕麦舒缓润肤身体乳防湿疹227g*2只</div>
+                            <div class="goods_price">￥10</div>
+                        </a>
+                        <a href="javascript:;" class=" goods_like mui-btn mui-btn-primary mui-btn-outlined">找相似</a>
+                    </li>
+                </ul> -->
+        </div>
+            <!-- 加载更多more -->
+    <!-- <div class="more">
+        <a  href="javascript:;"  class="mui-btn">
+            <i class="fa fa-angle-right"></i>
+            <i class="fa fa-angle-right"></i>
+            加载更多
+            <i class="fa fa-angle-left"></i>
+            <i class="fa fa-angle-left"></i>
+        </a>
+    </div>  -->
+    </div>
+
+    <!-- 尾部 -->
+    <footer class="pyg_link">
+        <a href="index.html">
+            <i class="fa fa-home"></i>
+            <p>首页</p>
+        </a>
+        <a href="./pages/category.html">
+            <i class="fa fa-list-ul"></i>
+            <p>分类</p>
+        </a>
+        <a href="./pages/cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>购物车</p>
+        </a>
+        <a href="./pages/login.html">
+            <i class="fa fa-user"></i>
+            <p>我的</p>
+        </a>
+    </footer>
+</body>
+<script id="swiDataTpl" type="text/html">
+    <!-- 轮播图 -->
+    <div class="mui-slider-group mui-slider-loop">
+        <!--支持循环，要求图片是数组里面最后一项-->
+        <div class="mui-slider-item mui-slider-item-duplicate"> <a href="#"> <img src="{{arr[arr.length-1].image_src}}"> </a></div>
+        {{each arr value index}}
+        <div class="mui-slider-item">
+        <a href="#"><img src="{{value.image_src}}"></a>
+        </div>
+        {{/each}}   
+        <!--支持循环，要求图片是数组里面第一项-->
+        <div class="mui-slider-item mui-slider-item-duplicate"> <a href="#"> <img src="{{arr[0].image_src}}"> </a> </div>
+    </div>
+        
+    <!-- 索引器 -->
+
+    <div class="mui-slider-indicator">
+        {{each arr value index}}
+        {{if index == 0}}
+        <div class="mui-indicator mui-active"></div>
+        {{/if}}
+        {{if index != 0}}
+        <div class="mui-indicator"></div>
+        {{/if}}
+        {{/each}}
+    </div>
+</script>
+<!-- 导航 -->
+<script type="text/html" id="navTpl">
+    {{each arr value index}}
+    <a href="javascript:;">
+        <img src="{{value.image_src}}" alt="">
+    </a> 
+    {{/each}}
+</script>
+
+
+<!-- 商品列表 -->
+<script type="text/html" id="goodsTpl">
+
+
+    {{each arr value index}}
+    <div class="goods_group">
+        <!-- 商品标题 -->
+        <div class="g_title">
+            <img src="{{value.group_img}}" alt="">
+        </div>
+
+
+    <!-- 商品 -->
+
+<ul class="goods_list">
+{{each value.goods value2 index2}}
+    <li>
+    <a href="./pages/goods_detail.html?goods_id={{value2.goods_id}}" class="goods_info">
+        <img data-lazyload="{{value2.goods_small_logo}}" alt="">
+        <div class="goods_name">{{value2.goods_name}}</div>
+        <div class="goods_price">￥{{value2.goods_price}}</div>
+    </a>
+    <a href="pages/good_list.html?id={{value2.cat_id}}" class=" goods_like mui-btn mui-btn-primary mui-btn-outlined">找相似</a>
+    </li>
+{{/each }}
+</ul>
+</div>
+{{/each }}
+</script>
+
+</html>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/mui/js/mui-lazyload.js"></script>
+<script src="./lib/mui/js/mui-lazyload.img.js"></script>
+<script src="./lib/arttemplate/template-web.js"></script>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>

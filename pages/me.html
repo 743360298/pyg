@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 理想视口的标准写法  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心 - me</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/me.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-back mui-pull-left"></a>
+        <h1 class="mui-title">个人中心</h1>
+    </header>
+    <!-- 内容 -->
+    <div class="pyg_view">
+        <div class="pyg_userinfo">
+            <!-- 个人中心 -->
+            <div class="pyg_center">
+                <i class="fa fa-user-circle-o"></i>
+               <div class="me">
+                    <span class="username phone">13800138888</span>
+                    <span class="mui-ellipsis email">qq@qq.com</span>
+               </div>
+            </div>
+            <div class="pyg_img">
+                <img src="../images/erweima.png" alt="">
+                <i class="fa fa-angle-right"></i>
+            </div>
+
+        </div>
+        <!-- 订单管理 -->
+        <div class="pgy_order">
+            <div class="order_title">
+                订单管理
+            </div>
+            <div class="order_center">
+                <a href="orders.html?type=2">
+                    <i class="fa fa-credit-card"></i>
+                    <p>待付款</p>
+                </a>
+                <a href="orders.html?type=3">
+                    <i class="fa fa-truck"></i>
+                    <p>待收货</p>
+                </a>
+                <a href="orders.html?type=1">
+                    <i class="fa fa-money"></i>
+                    <p>退款/售后</p>
+                </a>
+                <a href="orders.html?type=1">
+                    <i class="fa fa-cart-plus"></i>
+                    <p>全部订单</p>
+                </a>
+            </div>
+        </div>
+        <!-- 修改密码 -->
+        <div class="pyg_pwd">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">修改登录密码</li>
+                <li class="mui-table-view-cell">支付密码管理</li>
+                <li class="mui-table-view-cell">收货地址管理</li>
+           </ul>
+        </div>
+        <!-- 客服 -->
+        <div class="pyg_contack">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <span>联系客服</span>
+                    <span>400-000-0000</span>
+                </li>
+                <li class="mui-table-view-cell">意见反馈</li>
+                <li class="mui-table-view-cell">关于我们</li>
+           </ul>
+        </div>
+        <!-- 退出登录 -->
+        <div class="login_out">
+            <button id="btn_login_out" type="button" class="mui-btn mui-btn-danger">
+                退出登录
+            </button>
+        </div>
+    </div>
+
+
+    <!-- 尾部 -->
+    <footer class="pyg_link">
+        <a href="../index.html">
+            <i class="fa fa-home"></i>
+            <p>首页</p>
+        </a>
+        <a href="./category.html">
+            <i class="fa fa-list-ul"></i>
+            <p>分类</p>
+        </a>
+        <a href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>购物车</p>
+        </a>
+        <a href="me.html">
+            <i class="fa fa-user"></i>
+            <p>我的</p>
+        </a>
+    </footer>
+</body>
+
+</html>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/me.js"></script>

@@ -1,0 +1,44 @@
+.pyg_view{
+    padding: 10px 1px  ;
+}
+#segmentedControl{
+    background-color: #fff;
+}
+#item1,
+#item2,
+#item3{
+    padding: 13px 8px ;
+    // background-color: #fff;
+}
+.pyg-table{
+    background-color: #fff;
+    padding: 0 8px  0;
+    border-top: 1px solid #ccc ;
+    border-bottom: 1px solid #ccc ;
+    li{
+        border-bottom: 1px solid #ccc ;
+        padding:  5px 0 ;
+        a{
+            display: flex;
+            align-items: center ; 
+            .item_left{
+                flex: 3;
+                // overflow: hidden ; 
+                display: flex ; 
+                flex-direction: column ; 
+               span{
+                color: #333 !important;
+               }
+                // justify-content: space-between ; 
+            }
+            span{
+                flex:  1 ;
+                color:  red ; 
+            }
+        }
+    }
+    li:last-child{
+        border-bottom: 0 ; 
+    }
+
+}

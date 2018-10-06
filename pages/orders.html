@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 理想视口的标准写法  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单 - orders</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/orders.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-back mui-pull-left"></a>
+        <h1 class="mui-title">订单</h1>
+    </header>
+    <!-- 内容 -->
+    <div class="pyg_view">
+        <!-- tab -->
+        <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+            <a class="mui-control-item" href="#item1">
+                全部
+            </a>
+            <a class="mui-control-item mui-active" href="#item2">
+                待付款
+            </a>
+            <a class="mui-control-item" href="#item3">
+                待发货
+            </a>
+        </div>
+        <div>
+			<div id="item1" class="mui-control-content">
+                <ul class="pyg-table">
+                    <!-- <li>
+                        <a href="javascript:;">
+                            <div class="item_left">
+                                <span class="item_order">订单编号</span>
+                                <span class="item_num mui-ellipsis">GD2018914</span>
+                            </div>
+                            <span class="item_right">￥6666</span>
+                        </a>
+                    </li> -->
+                </ul>
+			</div>
+			<div id="item2" class="mui-control-content mui-active">
+				<div>正在开发待付款...</div>
+			</div>
+			<div id="item3" class="mui-control-content">
+				<div>正在开发待发货...</div>
+			</div>
+		</div>
+    </div>
+
+
+    <!-- 尾部 -->
+    <footer class="pyg_link">
+        <a href="../index.html">
+            <i class="fa fa-home"></i>
+            <p>首页</p>
+        </a>
+        <a href="./category.html">
+            <i class="fa fa-list-ul"></i>
+            <p>分类</p>
+        </a>
+        <a href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>购物车</p>
+        </a>
+        <a href="me.html">
+            <i class="fa fa-user"></i>
+            <p>我的</p>
+        </a>
+    </footer>
+</body>
+<!-- 模板 -->
+<script id="mainTpl" type="text/html">
+{{each arr value index}}
+    <li>
+        <a href="javascript:;">
+            <div class="item_left">
+                <!-- <div class="item_order"> -->
+                <span class="item_order">订单编号</span>
+                <span class="item_num mui-ellipsis">{{value.order_number}}</span>
+            </div>
+            <span class="item_right">￥{{value.order_price}}</span>
+        </a>
+    </li>
+{{/each}}
+</script>
+<!-- 模板 -->
+</html>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/orders.js"></script>

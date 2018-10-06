@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 理想视口的标准写法  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/category.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="pyg_search">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+    <!-- 内容 -->
+    <div class="pyg_view">
+        <!-- <i class="fa fa-spinner fa-spin"></i> -->
+        <!-- 左侧菜单 -->
+        <div class="left_box">
+            <ul class="pyg_menu">
+                <!-- <li class="active"></li> -->
+            </ul>
+        </div>
+        <!-- 右侧商品 -->
+        <div class="right_box">
+            <!-- <div class="goods_group">
+                <div class="goods_title">电视</div>
+                <ul class="goods_content">
+                    <li><a href="javascript:;">
+                        <img src="http://pdydxvpol.bkt.clouddn.com/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg" alt="">
+                        <p>曲面电视</p>
+                    </a></li>
+                </ul>    
+            </div> -->
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <footer class="pyg_link">
+        <a href="../index.html">
+            <i class="fa fa-home"></i>
+            <p>首页</p>
+        </a>
+        <a href="category.html">
+            <i class="fa fa-list-ul"></i>
+            <p>分类</p>
+        </a>
+        <a href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>购物车</p>
+        </a>
+        <a href="me.html">
+            <i class="fa fa-user"></i>
+            <p>我的</p>
+        </a>
+    </footer>
+</body>
+<!-- 左侧菜单 -->
+<script type="text/html" id="leftTpl">
+    {{each arr value index}}
+    {{if index== 0 }}
+    <li class="active">{{value.cat_name}}</li>
+    {{/if}}
+    {{if index != 0 }}
+    <li>{{value.cat_name}}</li>
+    {{/if}}
+    {{/each}}
+</script>
+<!-- 右侧商品 -->
+<script type="text/html" id="rightTpl">
+    <div>
+    {{each arr value1 index1}}
+    <div class="goods_group">
+         <div class="goods_title">{{value1.cat_name}}</div>
+         <ul class="goods_content">
+            {{each value1.children value2 index2}}
+             <li><a href="./good_list.html?id={{value2.cat_id}}">
+                 <img data-lazyload="{{value2.cat_icon||'../images/01.gif'}}" alt="">
+                 <p>{{value2.cat_name}}</p>
+             </a></li>
+             {{/each}}
+         </ul>    
+     </div>
+    {{/each}}
+    </div>
+</script>
+</html>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/mui/js/mui-lazyload.js"></script>
+<script src="../lib/mui/js/mui-lazyload.img.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/category.js"></script>
+<script src="../js/iscroll.js"></script>
+<script>
+
+    
+
+
+        setFz();
+        //  屏幕的宽度改变之后 
+        window.onresize = function () {
+          setFz();
+        }
+        function setFz() {
+          /* 
+          1 获取到当前的屏幕的宽度  =  要适配的屏幕的宽度
+          2 计算html字体的大小   fontsize=基础值 * 要适配的屏幕的宽度 /  设计稿的宽度
+          3 打开页面 直接调用该方法  屏幕的宽度改变之后 再调用一次这个方法 就可以动态改变html的字体
+           */
+      
+          // 当前屏幕的宽度
+          var screenWidth = document.querySelector("html").offsetWidth;
+          // 基础值
+          var baseVal = 100;
+          // 设计稿的宽度
+          var pageWidth = 375;
+          // 字体大小
+          var fz = baseVal * screenWidth / pageWidth;
+      
+          document.querySelector("html").style.fontSize = fz + "px";
+      
+        }
+
+    //    leftcroll = new IScroll('.left_box',{tap:true});
+    //    rightScroll = new IScroll('.right_box');
+
+      //$(".pyg_menu").on("tap","li",function(){
+        
+        // leftcroll.scrollToElement(this);
+
+        // rightScroll = new IScroll('.right_box div',{tap:true});
+      //})
+
+       
+
+
+
+      </script>
+      

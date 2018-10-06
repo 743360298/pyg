@@ -1,0 +1,158 @@
+body {
+  padding: 45px 0 50px;
+}
+
+#pyg_tool {
+  width: 100%;
+  background-color: pink;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#pyg_tool a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: block;
+  padding: 5px 0;
+  color: #666;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+#pyg_tool a i {
+  font-size: 20px;
+}
+
+#pyg_tool a:nth-child(-n+2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+#pyg_tool a:nth-child(3) {
+  background-color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+#pyg_tool a:nth-child(4) {
+  background-color: #e4393c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.pyg_goods {
+  font-weight: 600;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.goods_price {
+  padding: 5px;
+  font-size: 30px;
+  color: orange;
+}
+
+.goods_attr {
+  padding: 10px;
+}
+
+.goods_attr li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0;
+}
+
+.goods_attr li span:nth-child(1) {
+  color: #666;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.goods_attr li span:nth-child(2) {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  color: #333;
+}
+
+.goods_infos {
+  padding: 10px;
+}
+
+.goods_infos .goods_tab {
+  margin-bottom: 10px;
+}
+
+.goods_infos #gi1 p {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.goods_infos #gi1 p img {
+  display: block !important;
+  height: 100%;
+}
+
+.goods_infos #gi2 {
+  font-size: 14px;
+}
+
+.goods_infos #gi2 .gi2_title {
+  padding: 10px 0;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 1px solid #333;
+}
+
+.goods_infos #gi2 .gi2_content {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #6d6d72;
+}
+
+.goods_infos #gi2 .gi2_content span:nth-child(1) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.goods_infos #gi2 .gi2_content span:nth-child(2) {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+/*# sourceMappingURL=good_detail.css.map */

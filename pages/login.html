@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 理想视口的标准写法  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录 - login</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-back mui-pull-left"></a>
+        <h1 class="mui-title">登录</h1>
+    </header>
+    <!-- 内容 -->
+    <div class=" pyg_view">
+    <!-- input -->
+    <form class="mui-input-group">
+        <div class="mui-input-row">
+            <label>手机</label>
+        <!-- <input type="text" name="username" class="mui-input-clear" placeholder="请输入手机号"> -->
+        <input type="text" name="username" class="mui-input-clear" value="13800138888">
+        </div>
+        <div class="mui-input-row">
+            <label>密码</label>
+            <!-- <input type="password" name="password" class="mui-input-password" placeholder="请输入密码"> -->
+            <input type="password" name="password" class="mui-input-password" value="1111111">
+        </div>
+    </form>
+    <div class="tools">
+        <button type="button" class="mui-btn mui-btn-primary" id="login_btn">登录</button>
+        <a href="./register.html" type="button" class="mui-btn mui-btn-primary mui-btn-outlined">快速注册</a>
+    </div>
+    </div>
+
+
+    <!-- 尾部 -->
+    <footer class="pyg_link">
+        <a href="../index.html">
+            <i class="fa fa-home"></i>
+            <p>首页</p>
+        </a>
+        <a href="./category.html">
+            <i class="fa fa-list-ul"></i>
+            <p>分类</p>
+        </a>
+        <a href="./cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>购物车</p>
+        </a>
+        <a href="./me.html">
+            <i class="fa fa-user"></i>
+            <p>我的</p>
+        </a>
+    </footer>
+</body>
+
+</html>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/login.js"></script>

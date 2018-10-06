@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 理想视口的标准写法  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册 - register</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-back mui-pull-left"></a>
+        <h1 class="mui-title">注册</h1>
+    </header>
+    <!-- 内容 -->
+    <!-- mobile	手机号	必填
+    code	验证码	必填
+    email	邮箱	必填
+    pwd	密码	必填
+    gender	性别 -->
+    <div class="pyg_view">
+        <!-- 用户名输入框 -->
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>手机</label>
+            <!-- <input name="mobile" type="text" class="mui-input-clear" placeholder="请输入手机号"> -->
+            <input name="mobile" type="text" class="mui-input-clear" value="13800138000">
+            </div>
+            <!-- <div class="mui-input-row" id="pyg_code dialogDemo"> -->
+            <div class="mui-input-row" id="dialogDemo">
+                <label>验证码</label>
+                <input name="code" type="text" class="mui-input-clear" placeholder="4位验证码">
+                <!-- <button type="button" id="valida_code" class="mui-btn mui-btn-primary">获取验证码</button> -->
+                <button type="button" class="mui-btn mui-btn-blue mui-btn-outlined" id="toastBtn">获取验证码</button>
+                <!-- <button type="button" class="mui-btn mui-btn-blue mui-btn-outlined" id="vcode_btn" id="toastBtn">获取验证码</button> -->
+            </div>
+            <div class="mui-input-row">
+                <label>邮箱</label>
+            <input name="email" type="text" class="mui-input-clear" placeholder="邮箱不能为空">
+            </div>
+            <div class="mui-input-row">
+                <label>密码</label>
+                <input name="pwd" type="password" class="mui-input-password" placeholder="请输入密码">
+            </div>
+            <div class="mui-input-row">
+                <label>确认密码</label>
+                <input name="pwd2" type="password" class="mui-input-password" placeholder="请输入密码">
+            </div>
+            <div class="mui-input-row mui-radio">
+                <label>男</label>
+                <input name="gender" value="男"  type="radio">
+            </div>
+            <div class="mui-input-row mui-radio">
+                <label>女</label>
+                <input name="gender" value="女"  checked type="radio">
+            </div>
+        </form>
+        <div class="tools">
+            <a href="./login.html" type="button" class="mui-btn mui-btn-primary mui-btn-outlined">返回</a>
+            <button type="button" id="register_btn" class="mui-btn mui-btn-primary">注册</button>
+        </div>
+
+    </div>
+    <!-- 尾部 -->
+    <footer class="pyg_link">
+        <a href="../index.html">
+            <i class="fa fa-home"></i>
+            <p>首页</p>
+        </a>
+        <a href="./category.html">
+            <i class="fa fa-list-ul"></i>
+            <p>分类</p>
+        </a>
+        <a href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>购物车</p>
+        </a>
+        <a href="me.html">
+            <i class="fa fa-user"></i>
+            <p>我的</p>
+        </a>
+    </footer>
+</body>
+
+</html>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/register.js"></script>
+<script type="text/javascript">
+	(function() {
+		var ele = ['alertBtn', 'confirmBtn', 'promptBtn', 'toastBtn'];
+		var btn = ['是', '否'];
+		mui('#dialogDemo').on('click', 'button', function(e) {
+			var target = e.target.id;
+			switch(e.target.id) {
+				case 'alertBtn':
+					mui.alert('欢迎使用 MUI !')
+					break;
+				case 'confirmBtn':
+					mui.confirm('MUI是个好框架', 'Hello MUI', btn, function(e) {
+						e.index == 0 ? mui.toast('感谢您的支持!') : mui.toast('MUI 没有得到你的认可,继续加油!')
+					})
+					break;
+				case 'promptBtn':
+					mui.prompt('请输入您对MUI的评语', '性能好', 'Hello MUI', '', function(e) {
+						e.index == 1 && e.value != '' && mui.toast('谢谢您的评价: ' + e.value)
+					})
+					break;
+				case 'toastBtn':
+					mui.toast('验证码已发到你手机')
+					break;
+				default:
+					break;
+			}
+		})
+	})()
+
+// mui.toast('验证码已发到你手机',{ duration:'long', type:'toastBtn' })
+
+
+
+</script>

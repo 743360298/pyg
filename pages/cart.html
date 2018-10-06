@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 理想视口的标准写法  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车 - cart </title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/cart.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header" class="mui-bar mui-bar-nav">
+        <button id="delete_btn" class="mui-btn mui-btn-blue mui-btn-outlined mui-pull-left">删除</button>
+        <h1 class="mui-title">购物车</h1>
+        <button id="edit_btn" class="mui-btn mui-btn-blue mui-btn-outlined mui-pull-right">编辑</button>
+    </header>
+    <!-- 内容 -->
+    <div class="pyg_view">
+        <!-- 地址 -->
+        <div class="pyg_addr">
+            <div class="addr_title">配送地址</div>
+            <div class="addr_content">
+                <!-- <i class="mui-media-object mui-pull-left mui-icon mui-icon-location"></i> -->
+                <i class="fa fa-map-marker "></i>
+                <div class="default_addr">
+                        <span>默认地址</span>
+                        <div>中国日本省</div>
+                </div>
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+        <!-- 总价 -->
+        <div class="pyg_total_row">
+            <div class="total_title">
+                总价
+            </div>
+            <div class="total_content">
+                <div class="total_price">总价：<span>￥<i class="price">mui-numbox-input</i></span></div>
+                <div class="total_indent" id="create_btn">
+                    生成订单
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+        <!-- 订单 -->
+        <div class="pyg_order">
+            <div class="order_title">订单</div>
+            <div class="order_content">
+                <ul class="goods_wrap">
+                    
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <footer class="pyg_link">
+        <a href="../index.html">
+            <i class="fa fa-home"></i>
+            <p>首页</p>
+        </a>
+        <a href="category.html">
+            <i class="fa fa-list-ul"></i>
+            <p>分类</p>
+        </a>
+        <a href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>购物车</p>
+        </a>
+        <a href="me.html">
+            <i class="fa fa-user"></i>
+            <p>我的</p>
+        </a>
+    </footer>
+</body>
+<script id="mainTpl" type="text/html">
+    {{each obj value key}}
+    <li data-obj='{{value}}'>
+        <!-- 复选框 -->
+        <div class="item_chk">
+            <!-- mui -->
+            <div class="mui-input-row mui-checkbox">
+                <input class="delete_chk" name="checkbox1" value="Item 1" type="checkbox" checked>
+            </div>
+        </div>
+        <div class="item_img">
+            <img src="{{value.goods_small_logo}}" alt="">
+        </div>
+        <div class="item_info">
+            <div class="goods_name">
+                 {{value.goods_name}}
+            </div>
+            <div class="goods_price item_numberbox">
+                <span>￥{{value.goods_price}}</span>
+                <div class="mui-numbox"  data-numbox-step='1' data-numbox-min='0' data-numbox-max='{{value.goods_number}}'>
+                    <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox mui-numbox-input" type="number" value="{{value.amount}}">
+                    <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            
+        </div>
+    </li>
+    {{/each}}
+</script>
+</html>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/mui/js/mui-lazyload.js"></script>
+<script src="../lib/mui/js/mui-lazyload.img.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/iscroll.js"></script>
+<script>
+    setFz();
+    //  屏幕的宽度改变之后 
+    window.onresize = function () {
+        setFz();
+    }
+
+    function setFz() {
+        /* 
+        1 获取到当前的屏幕的宽度  =  要适配的屏幕的宽度
+        2 计算html字体的大小   fontsize=基础值 * 要适配的屏幕的宽度 /  设计稿的宽度
+        3 打开页面 直接调用该方法  屏幕的宽度改变之后 再调用一次这个方法 就可以动态改变html的字体
+         */
+
+        // 当前屏幕的宽度
+        var screenWidth = document.querySelector("html").offsetWidth;
+        // 基础值
+        var baseVal = 100;
+        // 设计稿的宽度
+        var pageWidth = 375;
+        // 字体大小
+        var fz = baseVal * screenWidth / pageWidth;
+
+        document.querySelector("html").style.fontSize = fz + "px";
+
+    }
+
+    //    leftcroll = new IScroll('.left_box',{tap:true});
+    //    rightScroll = new IScroll('.right_box');
+
+    //$(".pyg_menu").on("tap","li",function(){
+
+    // leftcroll.scrollToElement(this);
+
+    // rightScroll = new IScroll('.right_box div',{tap:true});
+    //})
+</script>
